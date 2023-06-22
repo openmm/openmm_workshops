@@ -6,7 +6,7 @@ This repo contains the materials for the OpenMM workshop delivered on 12th July 
 The workshop consists of an introduction presentation, information on setting up an environment to runs the exercises, and three exercises.
 
 ## Introduction
-This is a powerpoint presenation, the slides can be found in [./slides](./slides)
+This is a powerpoint presentation, the slides can be found in [./slides](./slides)
 
 
 ## Setup
@@ -19,9 +19,10 @@ Note that we have designed the exercises to not be computationally expensive so 
 
 ## Exercises
 There are three exercises aimed at different types of user.
-1. *Protein in water.* Aimed a beginners, people running standard MD. Covers: setting up a simulation, running the simulation, basic analysis, using the different platforms, and advice on running on HPC resources.
-2. *Umbrella sampling.* Aimed at people looking to use the custom forces functionality of OpenMM (Can be done after exercise 1 if you are a beginner). Covers setting up and running an umbrella sampling simulation .
-3. *MLPs.* Aimed at people using Machine Learning Potentials
+1. [Part 1 - **Protein in water** and part 2 - **Protein-ligand complex**.](./exercise_1/) Aimed at beginners. Covers setting up a simulation, running the simulation, basic analysis, advice on running on HPC resources,parameterising a small molecule, combining topologies, using other tools to create OpenMM compatible input.
+2. [**Umbrella sampling.**](./exercise_2/) Aimed at people looking to use the custom forces functionality of OpenMM (Can be done after exercise 1 if you are a beginner). Covers setting up and running an umbrella sampling simulation.
+3. **Machine Leaning Potentials.** Aimed at people using Machine Learning Potentials. Covers some of the OpenMM Machine Learning software stack.
 
 ## Extras
-- Guide on building OpenMM from source
+- [Guide on building OpenMM from source](./extra/compile_openmm.ipynb).
+- Using the different platforms.
