@@ -1,60 +1,36 @@
 # Running on your own machine with a Conda environment.
 
-The steps are different depending on your OS
+## Installing Conda
 
-## Linux
+Please look at the Conda documentation and follow the steps for Miniconda for your operating system.
+https://conda.io/projects/conda/en/stable/user-guide/install/index.html
 
-### Prequesites
 
-You need to be able to open and use Terminal
+## Creating and activating a conda environment 
 
-### Steps
-
-1. Install conda. (If you already have conda installed jump to step 2.)
-
-We will use miniconda. You can download the bash install script here: https://docs.conda.io/en/latest/miniconda.html#linux-installers
-
-Or in terminal you can run the command:
-```bash
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-```
-
-Now run the bash script and follow the steps.
-```bash
-bash Miniconda3-latest-Linux-x86_64.sh
-```
-
-Once installed you may need to reopen terminal for conda to work.
-
-If it has installed properly the command
-```bash
-conda info
-```
-Should print information about your install and system.
-
-2. Create a new conda environment.
-The following command creates a new empty conda enviroment
+Create a new conda environment.
+The following command creates a new empty conda environment
 ```bash
 conda create -n openmm
 ```
 
-3. Activate new environment
+Activate new environment
 ```bash
 conda activate openmm
 ```
 
-3. Install OpenMM into the environment
+Install OpenMM into the environment
 OpenMM can be installed from conda-forge using the following command
 ```bash
 conda install -c conda-forge openmm
 ```
 
-4. Test installation
+Test installation
 ```bash
 python -m openmm.testInstallation
 ```
 
-If working the ouput should look similar to below (Note that if you do not have a GPU you will not see the OpenCL or CUDA platforms):
+If working the output should look similar to below (Note that if you do not have a GPU you will not see the OpenCL or CUDA platforms):
 
 <details>
 <summary> output </summary>
@@ -84,9 +60,35 @@ All differences are within tolerance.
 </details>
 
 
-## MacOS
+## Jupyter
+
+To run the jupyter notebooks in this workshop you will need to install Jupyter in your conda environment.
+```
+conda install -c conda-forge jupyter
+```
+
+You then load open the notebook with jupyter in your webrowser with the command
+```
+jupyter notebook <notebook>.ipynb
+```
+
+Alternatively you can open the notebook in [vscode](https://code.visualstudio.com/) and install the jupyter extension.
+
+## mamba vs conda
+
+Note that our example notebooks all use `mamba install ...` commands. 
+
+`mamba` is a drop in replacement for `conda` and is significantly faster at solving environments and installing the packages. We recommend you use mamba but all `mamba install` commands can be replaced with `conda install` and they should work the same.
+
+Once you have a working conda installation you can install mamba with the following line:
+```
+conda install mamba -n base -c conda-forge
+```
 
 
-## Windows
+## Getting the notebooks
 
-
+You can get the notebooks and materials by git cloning this repo
+```
+git clone https://github.com/sef43/openmm_workshop.git
+```
