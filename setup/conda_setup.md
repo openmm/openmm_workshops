@@ -90,5 +90,5 @@ conda install mamba -n base -c conda-forge
 
 You can get the notebooks and materials by git cloning this repo
 ```
-git clone https://github.com/sef43/openmm_workshop.git
+git clone https://github.com/openmm/openmm_workshop_july2023.git
 ```
