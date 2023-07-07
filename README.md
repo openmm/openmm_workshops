@@ -1,11 +1,16 @@
 # OpenMM workshop
 
-This repository contains the materials for the OpenMM workshop delivered on 12th July 2023 after the CCPBioSim conference.
+This repository contains the materials for the OpenMM workshop that will be delivered on the 12th July 2023 after the CCPBioSim conference.
 
 The workshop consists of an introduction presentation, setup information, and a series of jupyter notebooks.
 
+The workshop will be delivered in person and on Zoom where demonstrators will be on hand to answer questions. The schedule has been sent to attendees.
+
+Only the intro slides are specific to the live course. The workshop materials are designed to be done by anyone at anytime! We aim to keep the notebooks up to date. If you have any questions, find any bugs, or want to contribute a new notebook please raise an issue in the github repository.
+
+
 ## Introduction
-This is a powerpoint presentation. The slides can be found in [./slides](./slides)
+This is a powerpoint presentation. The slides will be found in [./slides](./slides) once they have been uploaded closer to the event.
 
 
 ## Setup
@@ -14,6 +19,8 @@ There are two ways to run the workshop notebooks:
 - Running locally on your own machine in a Conda environment. 
  
 The instructions for either can be found in [./setup](./setup/README.md).
+
+We aim to keep the notebooks fully tested in Colab so we suggest you run them in Colab.
 
 Note that we have designed the exercises to not be computationally expensive so they can be run on any hardware.
 
@@ -33,7 +40,7 @@ The material is in the form of jupyter notebooks. It is split up into three sect
 
 ## Extras
 - [Guide on building OpenMM from source](./extra/compile_openmm.ipynb).
-- Using the different platforms.
+
 
 ## Acknowledgments
-- This workshop was prepared by Stephen Farr (University of Edinburgh, Michel research group) with support from EPSRC grant EP/W030276/1 ''Supporting the OpenMM Community-led Development of Next-Generation Condensed Matter Modelling Software'' 
+- This workshop was prepared by Stephen Farr (University of Edinburgh, Michel research group) with support from EPSRC grant EP/W030276/1 ''Supporting the OpenMM Community-led Development of Next-Generation Condensed Matter Modelling Software'' and with help from Julien Michel (University of Edinburgh) and Will Poole (University of Southampton, Essex research group).
