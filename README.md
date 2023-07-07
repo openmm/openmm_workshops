@@ -34,3 +34,6 @@ The material is in the form of jupyter notebooks. It is split up into three sect
 ## Extras
 - [Guide on building OpenMM from source](./extra/compile_openmm.ipynb).
 - Using the different platforms.
+
+## Acknowledgments
+- This workshop was prepared by Stephen Farr (University of Edinburgh, Michel research group) with support from EPSRC grant EP/W030276/1 ''Supporting the OpenMM Community-led Development of Next-Generation Condensed Matter Modelling Software'' 
