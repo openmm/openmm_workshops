@@ -10,7 +10,7 @@ Only the intro slides are specific to the live course. The workshop materials ar
 
 
 ## Introduction
-This is a powerpoint presentation. The slides will be found in [./slides](./slides) once they have been uploaded closer to the event.
+This is a powerpoint presentation. The slides can be found in [./slides](./slides).
 
 
 ## Setup
