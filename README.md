@@ -1,12 +1,12 @@
 # OpenMM workshop
 
-This repository contains the materials for the OpenMM workshop that will be delivered on the 12th July 2023 after the CCPBioSim conference.
+This repository contains the materials for the OpenMM workshop that was delivered on the 12th July 2023 after the CCPBioSim conference.
 
 The workshop consists of an introduction presentation, setup information, and a series of jupyter notebooks.
 
-The workshop will be delivered in person and on Zoom where demonstrators will be on hand to answer questions. The schedule has been sent to attendees.
+The workshop was delivered in person and on Zoom where demonstrators were be on hand to answer questions. 
 
-Only the intro slides are specific to the live course. The workshop materials are designed to be done by anyone at anytime! We aim to keep the notebooks up to date. If you have any questions, find any bugs, or want to contribute a new notebook please raise an issue in the github repository.
+Only the intro slides are specific to the live course. The workshop materials are designed to be done by anyone at anytime! We aim to keep the notebooks up to date. If you have any questions, find any bugs, or have suggestions for improvement please raise an issue in the github repository.
 
 
 ## Introduction
