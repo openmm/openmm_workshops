@@ -1,4 +1,4 @@
-# Running on your own machine with a Conda environment.
+# Running on your own machine with a Conda environment
 
 ## Installing Conda
 
