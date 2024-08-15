@@ -1,32 +1,38 @@
-# OpenMM workshop
+# OpenMM Workshop
 
-This repository contains the materials for the OpenMM workshop that was delivered on the 12th July 2023 after the CCPBioSim conference.
+This repository contains the materials for the OpenMM workshop on 6 September 2024, as part of the [CCPBioSim Training Week 2024](https://www.ccpbiosim.ac.uk/training2024). The workshop introduces OpenMM for running molecular dynamics simulations and includes examples of how to use custom forces and machine learning potentials. Specifically, the workshop includes:
 
-The workshop consists of an introduction presentation, setup information, and a series of jupyter notebooks.
+- An introductory presentation
+- Setup instructions
+- A series of Jupyter notebooks
 
-The workshop was delivered in person and on Zoom where demonstrators were be on hand to answer questions. 
+The workshop is delivered in person and on Zoom where demonstrators are on hand to answer questions. Only the introductory slides are specific to the live course. The workshop materials, which we aim to keep up to date, are designed to be done by anyone at anytime!
 
-Only the intro slides are specific to the live course. The workshop materials are designed to be done by anyone at anytime! We aim to keep the notebooks up to date. If you have any questions, find any bugs, or have suggestions for improvement please raise an issue in the github repository.
-
-
-## Introduction
-This is a powerpoint presentation. The slides can be found in [./slides](./slides).
+If you have any questions, find any bugs, or have suggestions for improvement, please raise an issue in the GitHub repository.
 
 
-## Setup
+## 1. Introduction
+
+This is a powerpoint presentation. The slides can be found at [here](./slides).
+
+
+## 2. Setup
+
 There are two ways to run the workshop notebooks:
-- In a web browser with Google Colab. 
+
+- In a web browser via Google Colab. 
 - Running locally on your own machine in a Conda environment. 
  
-The instructions for either can be found in [./setup](./setup/README.md).
+The instructions for either can be found in the [setup guide](./setup/README.md).
 
-We aim to keep the notebooks fully tested in Colab so we suggest you run them in Colab.
+We aim to keep the notebooks fully tested in Colab, so we suggest you run them there.
 
 Note that we have designed the exercises to not be computationally expensive so they can be run on any hardware.
 
 
-## Training materials
-The material is in the form of jupyter notebooks. It is split up into three sections.
+## 3. Training Materials
+
+The material is provided in the form of Jupyter notebooks. It is split up into three sections:
 
 ### Section 1 - Introduction to OpenMM
 - [**Protein in water**](./section_1/protein_in_water.ipynb). Aimed at people new to OpenMM. This covers loading in a PDB file, setting up a simulation, running the simulation, basic analysis, and advice for running on HPC resources.
@@ -43,4 +49,5 @@ The material is in the form of jupyter notebooks. It is split up into three sect
 
 
 ## Acknowledgments
-- This workshop was prepared by Stephen Farr (University of Edinburgh, Michel research group) with support from EPSRC grant EP/W030276/1 ''Supporting the OpenMM Community-led Development of Next-Generation Condensed Matter Modelling Software'' and with help from Julien Michel (University of Edinburgh) and Will Poole (University of Southampton, Essex research group).
+
+This workshop was prepared by Stephen Farr (University of Edinburgh, Michel research group) with support from EPSRC grant EP/W030276/1 ''Supporting the OpenMM Community-led Development of Next-Generation Condensed Matter Modelling Software'' and with help from Julien Michel (University of Edinburgh) and Will Poole (University of Southampton, Essex research group). The workshop materials were further adapted and improved by João Morado (University of Edinburgh, Michel Research Group) with continued support from the same EPSRC grant.
