@@ -32,11 +32,11 @@ Note that we have designed the exercises to not be computationally expensive so 
 The material is provided in the form of Jupyter notebooks. It is split up into three sections:
 
 ### Section 1 - Introduction to OpenMM
-- [**Protein in water**](./section_1/protein_in_water.ipynb). Aimed at people new to OpenMM. This covers loading in a PDB file, setting up a simulation, running the simulation, basic analysis, and advice for running on HPC resources.
-- [**Protein-ligand complex**](./section_1/protein_ligand_complex.ipynb). Aimed at beginners. Covers parameterising a small molecule, combining topologies, and using other tools to create OpenMM compatible input.
+- [**Protein in Water**](./section_1/protein_in_water.ipynb). Aimed at people new to OpenMM. This covers loading in a PDB file, setting up a simulation, running the simulation, basic analysis, and advice for running on HPC resources.
+- [**Protein-Ligand Complex**](./section_1/protein_ligand_complex.ipynb). Aimed at beginners. Covers parameterising a small molecule, combining topologies, and using other tools to create OpenMM compatible input.
 
-### Section 2 - Custom forces
-- [**Custom forces and Umbrella sampling**](./section_2/custom_forces.ipynb). Aimed at people looking to use the custom forces functionality of OpenMM (Can be done after section 1 material if you are a beginner). Covers using custom forces with a case-study of umbrella sampling.
+### Section 2 - Custom Forces
+- [**Custom Forces and Umbrella sampling**](./section_2/custom_forces.ipynb). Aimed at people looking to use the custom forces functionality of OpenMM (Can be done after section 1 material if you are a beginner). Covers using custom forces with a case-study of umbrella sampling.
 
 ### Section 3 - Machine Learning Potentials
 - [**Machine Leaning Potentials**](./section_3/machine_learning_potentials.ipynb). Aimed at people using Machine Learning Potentials. Covers the OpenMM Machine Learning software stack with examples of using ANI and MACE.
