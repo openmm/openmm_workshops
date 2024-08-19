@@ -10,25 +10,22 @@ The workshop is delivered in person and on Zoom where demonstrators are on hand 
 
 If you have any questions, find any bugs, or have suggestions for improvement, please raise an issue in the GitHub repository.
 
-
 ## 1. Introduction
 
 This is a powerpoint presentation. The slides can be found at [here](./slides).
-
 
 ## 2. Setup
 
 There are two ways to run the workshop notebooks:
 
-- In a web browser via Google Colab. 
-- Running locally on your own machine in a Conda environment. 
- 
+- In a web browser via Google Colab.
+- Running locally on your own machine in a Conda environment.
+
 The instructions for either can be found in the [setup guide](./setup/README.md).
 
 We aim to keep the notebooks fully tested in Colab, so we suggest you run them there.
 
 Note that we have designed the exercises to not be computationally expensive so they can be run on any hardware.
-
 
 ## 3. Training Materials
 
@@ -47,7 +44,6 @@ The material is provided in the form of Jupyter notebooks. It is split up into t
 ## Extras
 - [Guide on building OpenMM from source](./extra/compile_openmm.ipynb).
 
-
 ## Acknowledgments
 
-This workshop was prepared by Stephen Farr (University of Edinburgh, Michel research group) with support from EPSRC grant EP/W030276/1 ''Supporting the OpenMM Community-led Development of Next-Generation Condensed Matter Modelling Software'' and with help from Julien Michel (University of Edinburgh) and Will Poole (University of Southampton, Essex research group). The workshop materials were further adapted and improved by João Morado (University of Edinburgh, Michel Research Group) with continued support from the same EPSRC grant.
+This workshop was prepared by Stephen Farr (University of Edinburgh, Michel research group) with support from EPSRC grant EP/W030276/1 'Supporting the OpenMM Community-led Development of Next-Generation Condensed Matter Modelling Software' and with help from Julien Michel (University of Edinburgh) and Will Poole (University of Southampton, Essex research group). The workshop materials were further adapted and improved by João Morado (University of Edinburgh, Michel research group) with continued support from the same EPSRC grant.
