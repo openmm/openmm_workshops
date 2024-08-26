@@ -1,18 +1,10 @@
 #!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
 
 import BioSimSpace as BSS
-import sys
-
-
-# In[ ]:
-
 
 # Initialise the node object
 node = BSS.Gateway.Node("Prepare a protein-ligand complex for MD simulations.")
+
 # Set the node author and license.
 node.addAuthor(
     name="Julien Michel",
@@ -21,7 +13,7 @@ node.addAuthor(
 )
 node.setLicense("GPLv3")
 
-### Set the node inputs
+# Set the node inputs
 node.addInput("ligand", BSS.Gateway.FileSet(help="A 3D representation of a ligand."))
 node.addInput("protein", BSS.Gateway.FileSet(help="A 3D representation of a protein."))
 
@@ -33,6 +25,7 @@ node.addInput(
         default="gaff2",
     ),
 )
+
 node.addInput(
     "waterff",
     BSS.Gateway.String(
@@ -41,6 +34,7 @@ node.addInput(
         default="tip3p",
     ),
 )
+
 node.addInput(
     "proteinff",
     BSS.Gateway.String(
@@ -49,6 +43,7 @@ node.addInput(
         default="ff14SB",
     ),
 )
+
 node.addInput(
     "ion_conc",
     BSS.Gateway.Float(
@@ -59,6 +54,7 @@ node.addInput(
 # node.addInput("boxtype", BSS.Gateway.String(help="The shape of the periodic box",
 #                                             allowed=['cubic', 'rhombicDodecahedronHexagon', 'rhombicDodecahedronSquare', 'truncatedOctahedron'],
 #                                             default="truncatedOctahedron"))
+
 node.addInput(
     "freeboxpadding",
     BSS.Gateway.Length(
@@ -67,6 +63,7 @@ node.addInput(
         unit="angstrom",
     ),
 )
+
 node.addInput(
     "boundboxpadding",
     BSS.Gateway.Length(
@@ -75,35 +72,23 @@ node.addInput(
         unit="angstrom",
     ),
 )
-### Set the node outputs
+
+# Set the node outputs
 node.addOutput("free", BSS.Gateway.FileSet(help="The solvated ligand system."))
 node.addOutput(
     "bound", BSS.Gateway.FileSet(help="The solvated protein-ligand complex.")
 )
-
-
-# In[ ]:
-
-
 node.showControls()
 
-
-# In[ ]:
-
-
-#######################################
-### Load and parameterise the ligand ##
-#######################################
+# --------------------------------------------------------------------------- #
+# Load the ligand and parameterise it using the specified forcefield.         #
+# --------------------------------------------------------------------------- #
 lig = BSS.IO.readMolecules(node.getInput("ligand"))[0]
 lig_p = BSS.Parameters.parameterise(lig, node.getInput("ligandff")).getMolecule()
 
-
-# In[ ]:
-
-
-########################################################
-### Work out bounding box for the ligand and solvate ###
-########################################################
+# --------------------------------------------------------------------------- #
+# Work out bounding box for the ligand and solvate                            #
+# --------------------------------------------------------------------------- #
 box_min, box_max = lig_p.getAxisAlignedBoundingBox()
 bounding_distances = [y - x for x, y in zip(box_min, box_max)]
 padded_distances = [x + node.getInput("freeboxpadding") for x in bounding_distances]
@@ -118,25 +103,20 @@ lig_solvated = BSS.Solvent.solvate(
 )
 print(lig_solvated)
 
-
-# In[ ]:
-
-
-#######################################
-### Load and parameterise the protein ##
-#######################################
+# --------------------------------------------------------------------------- #
+# Load the protein and parameterise it using the specified forcefield.        #
+# --------------------------------------------------------------------------- #
 protein = BSS.IO.readMolecules(node.getInput("protein"))[0]
 prot_p = BSS.Parameters.parameterise(protein, node.getInput("proteinff")).getMolecule()
 
-
-# In[ ]:
-
-
-# Combine ligand and protein topologies and solvate the complex #
+# --------------------------------------------------------------------------- #
+# Combine the ligand and protein topologies.                                  #
+# --------------------------------------------------------------------------- #
 complex = lig_p + prot_p
 box_min, box_max = complex.getAxisAlignedBoundingBox()
 bounding_distances = [y - x for x, y in zip(box_min, box_max)]
 padded_distances = [x + node.getInput("boundboxpadding") for x in bounding_distances]
+
 # Orthorhombic only
 box_angles = 3 * [90 * BSS.Units.Angle.degree]
 complex_solvated = BSS.Solvent.solvate(
@@ -148,25 +128,10 @@ complex_solvated = BSS.Solvent.solvate(
 )
 print(complex_solvated)
 
-
-# In[ ]:
-
-
 # Save systems
 node.setOutput("free", BSS.IO.saveMolecules("free", lig_solvated, ["PRM7", "RST7"]))
 node.setOutput(
     "bound", BSS.IO.saveMolecules("bound", complex_solvated, ["PRM7", "RST7"])
 )
 
-
-# In[ ]:
-
-
 node.validate()
-
-
-# In[ ]:
-
-
-
-

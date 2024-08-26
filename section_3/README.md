@@ -1,3 +1,3 @@
-# Machine learning potentials
+# Section 3 - Machine Learning Potentials
 
-Please open the notebook: [machine_learning_potentials.ipynb](./machine_learning_potentials.ipynb)
+Please open the notebook on [how to use machine learning potentials in OpenMM.](./machine_learning_potentials.ipynb)
